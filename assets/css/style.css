@@ -1,0 +1,388 @@
+
+.principal-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 3fr 2fr 10fr 5fr;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    background-image: url(../img/banner.jpg);
+    background-position: auto;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    
+}
+
+header h1 {
+    display: flex;
+    text-align: center;
+    align-items: flex-end;
+    justify-content: left;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+aside {
+    grid-area: aside;
+    background-color: rgb(126, 118, 113);
+    background-position: auto;
+    background-size: cover;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-style: italic;
+
+}
+
+aside img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+
+}
+
+.contenido a{
+    text-decoration: none;
+    color: azure;
+    padding: 1rem;
+    
+}
+
+.contenido a:hover {
+    color: rgb(239, 171, 171);
+
+}
+
+
+
+main a {
+
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    font-size: 30px;
+    font-style: italic;
+
+}
+
+main a:hover {
+    color: rgb(239, 171, 171);
+}
+
+    
+
+.contenido {
+    padding: 0%;
+    margin: 0%;
+}
+
+main {
+    grid-area: main;
+    height: 100%;
+    width: auto;
+    padding-top: 2rem;
+   
+
+}
+
+
+
+.info {
+    height: fit-content;
+    width: auto;
+    text-align: justify;
+    padding: 1rem;
+
+}
+
+.card {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+
+#recuerda {
+    display: none;
+}
+
+.volver {
+    padding: 0%;
+    margin: 0%;
+}
+
+.volver a {
+    padding: 0%;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volver img {
+    width: 10rem;
+    height: auto;
+    
+}
+
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: 8rem;
+}
+
+.fa-brands {
+    display: flex;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+
+
+footer img {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: large;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .principal-container {
+        grid-template-columns: 20rem 2fr;
+        grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+        height: 100vh;
+        
+        
+    }
+
+    header {
+        height: 15rem;
+    }
+
+    .informaciones {
+        display: grid;
+        ;
+    }
+
+    .info {
+        height: fit-content;
+        width: auto;
+        text-align: justify;
+        padding-left: 4rem;
+    
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding-left: 4rem;
+        
+        
+    }
+
+   .card img {
+
+        width: 100%;
+        height: 70%;
+        object-fit: contain; 
+        transition: 0.5s ease-in;
+        z-index: 1; 
+        position: relative;
+    }
+
+    .card img:hover {
+       
+        z-index: 10;
+        transform: translate(-50%, -50%)scale(2);
+        position: static;
+      
+    }
+
+    #recuerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(255, 255, 255); 
+        background-position: auto;
+        background-size: cover;
+        padding-top: 2rem;
+        border-radius: 4%;
+
+    }
+
+    #recuerda:hover {
+        color: rgb(239, 171, 171);
+    }
+
+    #recuerda img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        object-fit: cover;
+        animation: rotate 7s linear infinite;
+     
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        
+    }
+
+    
+
+ 
+}
+
+
+@media (min-width: 1201px) {
+
+    .principal-container {
+        grid-template-columns: 20rem 2fr;
+        grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+        height: 100vh;
+        
+        
+    }
+
+    header {
+        height: 15rem;
+    }
+
+    
+
+    .info {
+        height: fit-content;
+        width: auto;
+        text-align: justify;
+        padding: 1rem;
+        padding-left: 10rem;
+    
+    }
+
+    .informaciones {
+        display: grid;
+        
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+        padding-left: 10rem;
+        
+    }
+
+    .card img {
+
+        width: 100%;
+        height: 70%;
+        object-fit: contain;
+        transition: 0.5s ease-in;
+        z-index: 1; 
+        position: relative;
+     
+    }
+
+    .card img:hover {
+        z-index: 10;
+        transform: translate(-50%, -50%)scale(2);
+        position: static;
+        
+    
+      
+    }
+
+    #recuerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(255, 255, 255); 
+        background-position: auto;
+        background-size: cover;
+        padding-top: 2rem;
+        border-radius: 4%;
+
+    }
+
+    #recuerda:hover {
+        color:rgb(239, 171, 171);
+    }
+
+    #recuerda img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        object-fit: cover;
+        animation: rotate 7s linear infinite;
+     
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        
+    }
+
+
+}
+
+
+
+
+
